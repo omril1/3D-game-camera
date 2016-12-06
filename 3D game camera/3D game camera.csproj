@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{97514C58-895D-4B41-A45B-2F948F2EB081}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_3D_game_camera</RootNamespace>
+    <AssemblyName>3D game camera</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Camera3D.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sphere.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\ship\metal.jpg" />
+    <Content Include="Content\SkyBox\clear_back.JPG" />
+    <Content Include="Content\SkyBox\clear_front.JPG" />
+    <Content Include="Content\SkyBox\clear_left.JPG" />
+    <Content Include="Content\SkyBox\clear_right.JPG" />
+    <Content Include="Content\SkyBox\clear_top.JPG" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\bin\Windows\SkyBox\clear_back.xnb" />
+    <None Include="Content\bin\Windows\SkyBox\clear_back_0.xnb" />
+    <None Include="Content\bin\Windows\SkyBox\clear_front.xnb" />
+    <None Include="Content\bin\Windows\SkyBox\clear_front_0.xnb" />
+    <None Include="Content\bin\Windows\SkyBox\clear_left.xnb" />
+    <None Include="Content\bin\Windows\SkyBox\clear_left_0.xnb" />
+    <None Include="Content\bin\Windows\SkyBox\clear_right.xnb" />
+    <None Include="Content\bin\Windows\SkyBox\clear_right_0.xnb" />
+    <None Include="Content\bin\Windows\SkyBox\clear_top.xnb" />
+    <None Include="Content\bin\Windows\SkyBox\clear_top_0.xnb" />
+    <None Include="Content\bin\Windows\SkyBox\skybox.xnb" />
+    <None Include="Content\obj\Windows\.mgcontent" />
+    <None Include="Content\obj\Windows\SkyBox\clear_back.mgcontent" />
+    <None Include="Content\obj\Windows\SkyBox\clear_back_0.mgcontent" />
+    <None Include="Content\obj\Windows\SkyBox\clear_front.mgcontent" />
+    <None Include="Content\obj\Windows\SkyBox\clear_front_0.mgcontent" />
+    <None Include="Content\obj\Windows\SkyBox\clear_left.mgcontent" />
+    <None Include="Content\obj\Windows\SkyBox\clear_left_0.mgcontent" />
+    <None Include="Content\obj\Windows\SkyBox\clear_right.mgcontent" />
+    <None Include="Content\obj\Windows\SkyBox\clear_right_0.mgcontent" />
+    <None Include="Content\obj\Windows\SkyBox\clear_top.mgcontent" />
+    <None Include="Content\obj\Windows\SkyBox\clear_top_0.mgcontent" />
+    <None Include="Content\obj\Windows\SkyBox\skybox.mgcontent" />
+    <None Include="Content\ship\ship.x" />
+    <None Include="Content\SkyBox\skybox.x" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
